@@ -1,9 +1,7 @@
 package com.jim.springMVC.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author Jim
@@ -38,6 +36,12 @@ public class UserController {
     @PostMapping("/user")
     public String insertUser(String username,String password){
         System.out.println("添加用户信息，\n用户名："+username+"\n密码："+password);
+        return "success";
+    }
+
+    @PutMapping("/user")
+    public String updateUser(String username,String password){
+        System.out.println("更新用户信息，\n用户名："+username+"\n密码："+password);
         return "success";
     }
 }
