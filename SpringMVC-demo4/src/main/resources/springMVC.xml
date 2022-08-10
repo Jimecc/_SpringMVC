@@ -29,6 +29,9 @@
     </bean>
     <!--    配置试图控制器-->
     <mvc:view-controller path="/" view-name="index"></mvc:view-controller>
+    <mvc:view-controller path="/file" view-name="file"></mvc:view-controller>
+    <mvc:default-servlet-handler/>
     <mvc:annotation-driven/>
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>
 
 </beans>
